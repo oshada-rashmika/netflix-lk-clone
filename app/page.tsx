@@ -113,6 +113,55 @@ export default function Home() {
             </form>
           </div>
         </div>
+
+        {/* Transition Element - bridges hero into the black content area below */}
+        <div className="absolute inset-x-0 bottom-0 h-[115px] overflow-hidden pointer-events-none z-20">
+          <svg
+            viewBox="0 0 1440 160"
+            preserveAspectRatio="none"
+            className="absolute inset-0 h-full w-full"
+          >
+            <defs>
+              {/* Center Glow might not be 100% accurate, but it's close */}
+              <radialGradient
+                id="centerGlow"
+                cx="50%" cy="0%" r="62%"
+                gradientTransform="matrix(1,0,0,1.5,0,0)"
+              >
+                <stop offset="0%" stopColor="#15326b" stopOpacity="0.85" />
+                <stop offset="30%" stopColor="#0f2352" stopOpacity="0.65" />
+                <stop offset="60%" stopColor="#081230" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#000000" stopOpacity="0" />
+              </radialGradient>
+
+              <linearGradient id="edgeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#E50914" stopOpacity="0" />
+                <stop offset="35%" stopColor="#F0102F" stopOpacity="1" />
+                <stop offset="50%" stopColor="#FF2447" stopOpacity="1" />
+                <stop offset="65%" stopColor="#F0102F" stopOpacity="1" />
+                <stop offset="100%" stopColor="#E50914" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+
+            <path d="M0,50 Q720,-30 1440,50 L1440,160 L0,160 Z" fill="#000000" />
+
+            <path d="M0,50 Q720,-30 1440,50 L1440,160 L0,160 Z" fill="url(#centerGlow)" />
+
+            <path
+              d="M0,50 Q720,-30 1440,50"
+              fill="none"
+              stroke="url(#edgeGlow)"
+              strokeWidth="5"
+            />
+          </svg>
+        </div>
+
+        {/* "Trending Now" label — sits in the solid black band below the curve */}
+        <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 px-10 md:px-16 transform translate-x-[85px] transform translate-y-[14px]">
+          <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
+            Trending Now
+          </h2>
+        </div>
       </section>
 
     </main>
