@@ -5,11 +5,32 @@
   --foreground: #171717;
 }
 
+/*Pixel-matched variables cloned specifically to match the Netflix LK July 2026 capture*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /*Exact Brand Colors*/
+  --color-netflix-red: #E50914;
+  --color-netflix-black: #000000;
+
+  /*Custom Gradient Utilities for layout and sections*/
+  --background-image-hero-overlay: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.2) 60%,
+      rgba(0, 0, 0, 0.8) 100%),
+    linear-gradient(to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.9) 100%);
+
+  --background-image-trending-glow: radial-gradient(circle at 50% 120%,
+      rgba(103, 58, 183, 0.18) 0%,
+      rgba(33, 150, 243, 0.06) 50%,
+      transparent 80%);
 }
 
 @media (prefers-color-scheme: dark) {
