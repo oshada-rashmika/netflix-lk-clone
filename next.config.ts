@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "assets.nflxext.com",
       },
+      {
+        protocol: "https",
+        hostname: "occ.a.nflxso.net",
+      },
     ],
   },
 };
