@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Netflix Sri Lanka Homepage Clone - XAVENTRA Technical Assessment
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This project is a high-fidelity, responsive clone of the Netflix Sri Lanka homepage, developed as part of the XAVENTRA Technical Assessment. The primary objective was to accurately recreate the complex layout, specific design language, and responsive behaviors of the Netflix interface using modern web technologies. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technology Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **Next.js (React):** Chosen for its robust component-based architecture and built-in optimization features. Next.js provided a scalable foundation for managing complex UI sections, such as the Trending and FAQ sections, through modular and reusable components.
+*   **Tailwind CSS:** Selected for its utility-first approach, which was essential for executing the highly specific pixel adjustments, intricate gradient overlays, and complex responsive breakpoints required to match the Netflix UI without managing bloated external stylesheets.
+*   **TypeScript:** Implemented to ensure type safety, improve maintainability, and prevent runtime errors when passing data across UI components.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Local Setup Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To run this project locally, please follow these steps:
 
-## Learn More
+1.  Clone this repository to your local machine.
+2.  Navigate to the project directory via your terminal.
+3.  Install the necessary dependencies:
+    ```bash
+    npm install
+    ```
+4.  Start the development server:
+    ```bash
+    npm run dev
+    ```
+5.  Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-To learn more about Next.js, take a look at the following resources:
+## Development Time
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project was completed in **5 hours**, encompassing initial environment setup, layout structuring, styling, and final responsive adjustments.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technical Limitations & Deviations (What I Know Isn't 100%)
 
-## Deploy on Vercel
+I pushed my skills to the absolute limit to build a 1:1 clone that is as humanly identical as possible, pouring everything I know about frontend engineering into every pixel. However, given my current depth of knowledge, experience level, and lack of access to Netflix's internal servers, a few tiny elements deviate slightly from the original:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  **Proprietary 3D Assets:** The icons in the "More Reasons to Join" section on the official Netflix site are custom, proprietary 3D-rendered images hosted on their private Content Delivery Network (CDN). To avoid hotlinking proprietary assets, alternative CSS and standard SVG approaches were utilized to mimic the structural layout.
+2.  **Typography (Netflix Sans):** Netflix utilizes a highly guarded, custom typeface called "Netflix Sans." This project relies on standard, clean sans-serif web fonts such as Inter as fallbacks. Consequently, there are microscopic variances in character widths, font weights, and line heights.
+3.  **Gradient and Image Compression:** The exact gradient blending on the real site is tuned specifically for their highly compressed background imagery. While our CSS gradient stops are mathematically accurate, slight visual banding or contrast differences may occur depending on the specific source imagery used.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future Improvements
+
+Given an additional hour of development time, I would prioritize the following enhancements:
+
+*   **Asset Sourcing:** Source or recreate exact replica image assets for the "Reasons to Join" section to achieve complete visual parity.
+*   **Accessibility (a11y) Polish:** Implement comprehensive keyboard navigation and strict ARIA accessibility labels across all interactive elements, specifically targeting the FAQ accordion and horizontal scrolling interfaces.
+*   **Micro-interactions:** Introduce subtle entrance animations or parallax effects as UI elements scroll into the viewport to further elevate the premium feel of the interface.
+
+## Side-by-Side Comparison
+
+Below is a visual comparison between the original Netflix homepage and this clone during development.
+
+| Section | Original Netflix Homepage | Developed Clone |
+| :--- | :--- | :--- |
+| **Hero Section** | ![Original Hero](./public/original/hero.png) | ![Clone Hero](./public/clone/hero.png) |
+| **Trending Section** | ![Original Trending](./public/original/trending.png) | ![Clone Trending](./public/clone/trending.png) |
+| **Reasons to Join** | ![Original Reasons to Join](./public/original/reasons.png) | ![Clone Reasons to Join](./public/clone/reasons.png) |
+| **FAQ Section** | ![Original FAQ](./public/original/faq.png) | ![Clone FAQ](./public/clone/faq.png) |
+| **Footer Section** | ![Original Footer](./public/original/footer.png) | ![Clone Footer](./public/clone/footer.png) |
