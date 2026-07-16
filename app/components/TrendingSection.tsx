@@ -63,9 +63,8 @@ function ScrollIndicator() {
   return (
     <div
       id="trending-scroll-indicator"
-      aria-label="Scroll for more"
-      role="button"
-      className="flex flex-shrink-0 self-center items-center justify-center w-8 h-24 bg-zinc-800/70 backdrop-blur-sm cursor-pointer rounded-lg transition-colors duration-150 hover:bg-zinc-700/90 ml-4 mr-2"
+      aria-hidden="true"
+      className="flex flex-shrink-0 self-center items-center justify-center w-8 h-24 bg-zinc-800/70 backdrop-blur-sm rounded-lg ml-4 mr-2"
     >
       <ChevronRight className="w-6 h-6 text-gray-400" strokeWidth={2} />
     </div>
