@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TrendingSection from "./components/TrendingSection";
 import ReasonsToJoin from "./components/ReasonsToJoin";
+import FAQSection from "./components/FAQSection";
 
 export default function Home() {
   return (
@@ -170,6 +171,8 @@ export default function Home() {
       <TrendingSection />
 
       <ReasonsToJoin />
+
+      <FAQSection />
 
     </main>
   );
