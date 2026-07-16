@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "occ.a.nflxso.net",
       },
+      {
+        protocol: "https",
+        hostname: "occ-0-6516-64.1.nflxso.net",
+      },
     ],
   },
 };

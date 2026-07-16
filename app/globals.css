@@ -1,5 +1,3 @@
-/* // Base configurations and global resets for Netflix LK Clone - Edited manually for pixel-perfect fidelity. */
-
 @import "tailwindcss";
 
 :root {
@@ -7,18 +5,15 @@
   --foreground: #ffffff;
 }
 
-/*Pixel-matched variables cloned specifically to match the Netflix LK July 2026 capture*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /*Exact Brand Colors*/
   --color-netflix-red: #E50914;
   --color-netflix-black: #000000;
 
-  /*Custom Gradient Utilities for layout and sections*/
   --background-image-hero-overlay: linear-gradient(to top,
       rgba(0, 0, 0, 0.9) 0%,
       rgba(0, 0, 0, 0.2) 60%,
@@ -42,4 +37,26 @@ body {
 
 @utility tracking-netflix {
   letter-spacing: -0.05em;
+}
+
+/* Hides native scrollbar */
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Outlined rank numbers for TrendingSection */
+.rank-number {
+  color: #000000;
+  -webkit-text-stroke: 2.5px #ffffff;
+  paint-order: stroke fill;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-weight: 900;
+  font-size: 98px;
+  line-height: 1;
+  user-select: none;
 }
