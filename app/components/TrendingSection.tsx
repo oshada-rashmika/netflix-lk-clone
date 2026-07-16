@@ -45,27 +45,17 @@ interface TrendingCardProps {
 function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
   return (
     <article className="relative flex-shrink-0">
-      {/* Rank number: sits as a sibling of the poster (not padding-offset),
-          so its left-0 anchor is the article's true left edge. The poster
-          is pushed right by ml-9 — roughly half the rendered digit width
-          at this font-size — so the number's right half overlaps the card
-          and its left half protrudes into the gap. */}
-      <span
-        aria-hidden="true"
-        className="rank-number absolute bottom-6 left-0 z-10"
-      >
+      <span aria-hidden="true" className="rank-number absolute bottom-6 left-0 z-10">
         {rank}
       </span>
 
-      {/* Movie poster */}
-      <div className="relative ml-6 h-[280px] w-[200px] overflow-hidden rounded-xl scale-[0.9] origin-left">
-        <Image
-          src={posterUrl}
-          alt={title}
-          fill
-          sizes="175px"
-          className="object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-        />
+      {/* id added only on card 1 — used by ReasonsToJoin to measure the exact
+          rendered left edge, so alignment works regardless of any transform. */}
+      <div
+        id={rank === 1 ? "trending-first-poster" : undefined}
+        className="relative ml-6 h-[280px] w-[200px] overflow-hidden rounded-xl scale-[0.9] origin-left"
+      >
+        <Image src={posterUrl} alt={title} fill sizes="175px" className="object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
       </div>
     </article>
   );
@@ -75,20 +65,10 @@ function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
 function ScrollIndicator() {
   return (
     <div
+      id="trending-scroll-indicator"
       aria-label="Scroll for more"
       role="button"
-      className="
-        flex-shrink-0 self-center
-        flex items-center justify-center
-        w-6 h-30
-        -translate-x-27
-        bg-zinc-800/70
-        backdrop-blur-sm
-        cursor-pointer
-        rounded-lg
-        transition-colors duration-150
-        hover:bg-zinc-700/90
-      "
+      className="flex-shrink-0 self-center flex items-center justify-center w-6 h-30 -translate-x-27 bg-zinc-800/70 backdrop-blur-sm cursor-pointer rounded-lg transition-colors duration-150 hover:bg-zinc-700/90"
     >
       <ChevronRight className="w-10 h-10 text-gray-400" strokeWidth={2} />
     </div>

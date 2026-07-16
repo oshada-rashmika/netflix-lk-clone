@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TrendingSection from "./components/TrendingSection";
+import ReasonsToJoin from "./components/ReasonsToJoin";
 
 export default function Home() {
   return (
@@ -157,7 +158,7 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* "Trending Now" label — sits in the solid black band below the curve */}
+        {/* "Trending Now" label */}
         <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 px-10 md:px-16 transform translate-x-[85px] translate-y-[14px]">
           <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
             Trending Now
@@ -167,6 +168,8 @@ export default function Home() {
       </section>
 
       <TrendingSection />
+
+      <ReasonsToJoin />
 
     </main>
   );
