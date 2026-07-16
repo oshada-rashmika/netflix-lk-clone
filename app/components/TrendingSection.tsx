@@ -44,7 +44,7 @@ interface TrendingCardProps {
 
 function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
   return (
-    <article className="relative flex-shrink-0 mr-4 md:mr-0">
+    <article className="relative flex-shrink-0 mr-4 md:mr-0 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
       <span aria-hidden="true" className="rank-number absolute bottom-[20px] md:bottom-[28px] left-0 z-10 text-[64px] md:text-[98px]">
         {rank}
       </span>
@@ -53,7 +53,7 @@ function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
         id={rank === 1 ? "trending-first-poster" : undefined}
         className="relative ml-[22px] md:ml-[32px] h-[180px] w-[125px] sm:h-[210px] sm:w-[150px] md:h-[280px] md:w-[200px] overflow-hidden rounded-xl xl:scale-[0.9] origin-left"
       >
-        <Image src={posterUrl} alt={title} fill sizes="(min-width: 768px) 200px, 150px" className="object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
+        <Image src={posterUrl} alt={title} fill sizes="(min-width: 768px) 200px, 150px" className="object-cover" />
       </div>
     </article>
   );
