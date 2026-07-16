@@ -47,6 +47,51 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+
+        {/* Locale Selector Dropdown */}
+        <div className="relative inline-flex items-center mt-[52px]">
+          <div className="flex items-center bg-[#0f0f0f] border border-neutral-500 hover:border-white transition-colors rounded-[4px] px-3 py-[4px] pointer-events-none">
+            {/* Translation Glyph SVG from public/translate.svg */}
+            <svg
+              className="w-3.5 h-3.5 text-white mr-[6px]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.92}
+              strokeMiterlimit={10}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <line x1="0.5" y1="3.35" x2="12" y2="3.35" />
+              <line x1="6.25" y1="0.48" x2="6.25" y2="3.35" />
+              <path d="M9.12,3.35c0,3.52-3.28,8.2-7.66,10.55" />
+              <path d="M4.51,7.37A16.4,16.4,0,0,0,11,13.9" />
+              <polyline points="12.96 22.52 16.79 11.98 17.75 11.98 21.58 22.52" />
+              <line x1="20.43" y1="18.69" x2="15.07" y2="18.69" />
+              <line x1="11.04" y1="22.52" x2="14.88" y2="22.52" />
+              <line x1="19.67" y1="22.52" x2="23.5" y2="22.52" />
+            </svg>
+            <span className="text-white text-[14px] font-normal leading-none">English</span>
+            {/* Down Arrow SVG */}
+            <svg className="w-3 h-3 text-white ml-[10px]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5H7z" />
+            </svg>
+          </div>
+          {/* Overlay accessible select */}
+          <select className="absolute inset-0 w-full h-full opacity-0 cursor-pointer text-[#B3B3B3]">
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        {/* Country Text */}
+        <div className="mt-9 text-[#B3B3B3] text-[14px] font-normal">
+          Netflix Sri Lanka
+        </div>
+
+        {/* Legal Text */}
+        <div className="mt-8 text-[#737373] text-[11px] font-normal leading-normal max-w-[800px]">
+          This page is protected by Google reCAPTCHA to ensure you're not a bot.
+        </div>
       </div>
     </footer>
   );

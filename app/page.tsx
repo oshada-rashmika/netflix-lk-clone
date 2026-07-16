@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black font-sans antialiased selection:bg-[#E50914] selection:text-white">
+    <main className="min-h-screen bg-black font-sans antialiased selection:bg-[#E50914] selection:text-white overflow-x-hidden">
 
       <section className="relative h-screen w-full overflow-hidden">
 
@@ -123,10 +123,12 @@ export default function Home() {
         </div>
 
         {/* "Trending Now" label */}
-        <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 px-10 md:px-16 transform translate-x-[85px] translate-y-[14px]">
-          <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
-            Trending Now
-          </h2>
+        <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 transform translate-y-[14px]">
+          <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16 transform translate-x-[85px]">
+            <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
+              Trending Now
+            </h2>
+          </div>
         </div>
 
       </section>
