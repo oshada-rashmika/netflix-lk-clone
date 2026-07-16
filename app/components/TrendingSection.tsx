@@ -53,9 +53,9 @@ function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
           rendered left edge, so alignment works regardless of any transform. */}
       <div
         id={rank === 1 ? "trending-first-poster" : undefined}
-        className="relative ml-6 h-[280px] w-[200px] overflow-hidden rounded-xl scale-[0.9] origin-left"
+        className="relative ml-6 h-[210px] w-[150px] md:h-[280px] md:w-[200px] overflow-hidden rounded-xl xl:scale-[0.9] origin-left"
       >
-        <Image src={posterUrl} alt={title} fill sizes="175px" className="object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
+        <Image src={posterUrl} alt={title} fill sizes="(min-width: 768px) 200px, 150px" className="object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
       </div>
     </article>
   );
@@ -83,7 +83,7 @@ export default function TrendingSection() {
       className="bg-black w-full py-6 md:py-8"
     >
       <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
-        <div className="relative flex overflow-hidden rounded-r-md scale-99 -translate-y-7 translate-x-6 origin-top">
+        <div className="relative flex overflow-hidden rounded-r-md scale-99 xl:-translate-y-7 xl:translate-x-6 origin-top">
 
           {/* Scrollable cards row */}
           <div

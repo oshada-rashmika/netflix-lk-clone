@@ -37,7 +37,7 @@ export default function Home() {
         </div>
 
         {/* Header Navigation */}
-        <header className="absolute left-0 right-0 top-0 z-30 mx-auto flex w-full max-w-[1920px] items-center justify-between px-10 pt-8 md:px-40">
+        <header className="absolute left-0 right-0 top-0 z-30 mx-auto flex w-full max-w-[1920px] items-center justify-between px-6 md:px-10 xl:px-40 pt-8">
           {/* Netflix Logo */}
           <Image
             src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAUkLCBtHBbguPPqzaFOzEv4Pw_eS79j0y7ADR4hkB30-HkahpsUb5yvfzgKsfU2oNda-7hpkfYLnXhjc23JVT07PHsGgfsaHAB7qOhy2_5gn-nuKOVSUSBzn-i-O3ea2QQaXx3PYkHes.svg"
@@ -59,10 +59,10 @@ export default function Home() {
 
         {/* Main Center Content Container */}
         <div className="relative z-20 flex h-full w-full flex-col items-center justify-center px-4 text-center">
-          <div className="flex flex-col items-center w-full max-w-[950px] transform -translate-y-[34px]">
+          <div className="flex flex-col items-center w-full max-w-[950px] transform xl:-translate-y-[34px]">
 
             {/* H1 Primary Title */}
-            <h1 className="text-[32px] sm:text-[44px] md:text-[53px] font-semibold tracking-normal text-white leading-[1.3] max-w-[720px]">
+            <h1 className="text-[32px] md:text-[44px] xl:text-[53px] font-semibold tracking-normal text-white leading-[1.3] max-w-[720px]">
               Unlimited movies, TV<br />shows, and more
             </h1>
 
@@ -72,7 +72,7 @@ export default function Home() {
             </p>
 
             {/* Call to Action Text */}
-            <p className="mt-[24px] text-base md:text-[15px] font-normal tracking-normal text-white transform translate-y-[4px]">
+            <p className="mt-[24px] text-base md:text-[15px] font-normal tracking-normal text-white transform xl:translate-y-[4px]">
               Ready to watch? Enter your email to create or restart your membership.
             </p>
 
@@ -123,8 +123,8 @@ export default function Home() {
         </div>
 
         {/* "Trending Now" label */}
-        <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 transform translate-y-[14px]">
-          <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16 transform translate-x-[85px]">
+        <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 transform xl:translate-y-[14px]">
+          <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 xl:px-16 transform xl:translate-x-[85px]">
             <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
               Trending Now
             </h2>

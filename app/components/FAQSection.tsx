@@ -46,7 +46,7 @@ function AccordionItem({ question, answer }: FAQ) {
         className="flex w-full items-center justify-between bg-[#2d2d2d] hover:bg-[#414141] transition-colors duration-200 py-[22px] px-6 text-left"
         aria-expanded={isOpen}
       >
-        <span className="text-[22px] text-white font-light">{question}</span>
+        <span className="text-lg md:text-[22px] text-white font-light">{question}</span>
         <svg
           className={`w-10 h-10 text-white transition-transform duration-300 ease-out flex-shrink-0 ${isOpen ? "rotate-45" : "rotate-0"
             }`}
@@ -64,7 +64,7 @@ function AccordionItem({ question, answer }: FAQ) {
           }`}
       >
         <div className="overflow-hidden">
-          <div className="px-6 pb-5 text-white text-2xl leading-snug whitespace-pre-wrap border-t-2 border-black mt-[1px]">
+          <div className="px-6 pb-5 text-white text-lg md:text-2xl leading-snug whitespace-pre-wrap border-t-2 border-black mt-[1px]">
             <div className="pt-5">{answer}</div>
           </div>
         </div>
@@ -80,6 +80,10 @@ export default function FAQSection() {
   // Dynamically tracks the layout bounds to match the cards grid perfectly
   useEffect(() => {
     function measure() {
+      if (window.innerWidth < 1024) {
+        setEdges(null);
+        return;
+      }
       const poster = document.getElementById("trending-first-poster");
       const indicator = document.getElementById("trending-scroll-indicator");
       const container = containerRef.current;
@@ -108,7 +112,7 @@ export default function FAQSection() {
       <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
         <h2
           id="faq-heading"
-          className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform translate-x-[85px] translate-y-[-70px]"
+          className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform xl:translate-x-[85px] xl:translate-y-[-70px]"
         >
           Frequently Asked Questions
         </h2>
@@ -116,7 +120,7 @@ export default function FAQSection() {
         <div
           ref={containerRef}
           style={edges ? { marginLeft: edges.left, width: edges.width } : undefined}
-          className="transform translate-x-[-70px] translate-y-[-75px]"
+          className="transform xl:translate-x-[-70px] xl:translate-y-[-75px]"
         >
           {FAQS.map((faq, idx) => (
             <AccordionItem key={idx} question={faq.question} answer={faq.answer} />

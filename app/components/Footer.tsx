@@ -20,12 +20,12 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black py-10 md:py-16 mt-[-80px]">
+    <footer className="w-full bg-black py-10 md:py-16 xl:mt-[-80px]">
       {/* 
         We align the max-width and horizontal padding identically to previous sections
         to ensure the left edge of the grid aligns perfectly with the rest of the page.
       */}
-      <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16 transform translate-x-[85px]">
+      <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16 transform xl:translate-x-[85px]">
         <div className="mb-10">
           <Link
             href="#"
@@ -35,7 +35,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[40px] gap-y-2 max-w-[1120px]">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-[40px] gap-y-2 max-w-[1120px]">
           {FOOTER_LINKS.map((link) => (
             <li key={link}>
               <Link

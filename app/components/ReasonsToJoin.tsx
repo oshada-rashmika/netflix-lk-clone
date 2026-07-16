@@ -294,6 +294,10 @@ export default function ReasonsToJoin() {
 
   useEffect(() => {
     function measure() {
+      if (window.innerWidth < 1024) {
+        setEdges(null);
+        return;
+      }
       const poster = document.getElementById("trending-first-poster");
       const indicator = document.getElementById("trending-scroll-indicator");
       const grid = gridRef.current;
@@ -315,12 +319,12 @@ export default function ReasonsToJoin() {
   }, []);
 
   return (
-    <section aria-labelledby="reasons-heading" className="bg-black w-full py-8 md:py-10 transform translate-y-[-45px]">
+    <section aria-labelledby="reasons-heading" className="bg-black w-full py-8 md:py-10 transform xl:translate-y-[-45px]">
       <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
 
         <h2
           id="reasons-heading"
-          className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform translate-x-[85px]"
+          className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform xl:translate-x-[85px]"
         >
           More Reasons to Join
         </h2>
@@ -328,7 +332,7 @@ export default function ReasonsToJoin() {
         <div
           ref={gridRef}
           style={edges ? { marginLeft: edges.left, width: edges.width } : undefined}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 translate-x-[-70px] translate-y-[-4px]"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:translate-x-[-70px] xl:translate-y-[-4px]"
         >
           {REASONS.map((reason) => (
             <ReasonCard key={reason.heading} {...reason} />
