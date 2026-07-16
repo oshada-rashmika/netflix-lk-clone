@@ -128,7 +128,7 @@ export default function FAQSection() {
         </div>
 
         {/* Secondary Email Capture Block */}
-        <div className="flex flex-col items-center justify-center mt-[-10px] mb-12 text-center">
+        <div className="flex flex-col items-start md:items-center justify-center mt-10 xl:mt-[-10px] mb-12 text-left md:text-center">
           <p className="text-white font-normal text-[15px] mb-4">
             Ready to watch? Enter your email to create or restart your membership.
           </p>
