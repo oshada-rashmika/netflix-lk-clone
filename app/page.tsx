@@ -25,10 +25,10 @@ export default function Home() {
 
         {/* Global Outer Gradients */}
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.48)_20%,rgba(0,0,0,0.68)_65%,rgba(0,0,0,0.88)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.58)_20%,rgba(0,0,0,0.76)_65%,rgba(0,0,0,0.92)_100%)]"
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0)_15%,rgba(0,0,0,0)_85%,rgba(0,0,0,0.65)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0)_15%,rgba(0,0,0,0)_70%,rgba(0,0,0,0.95)_100%)]"
         />
 
         {/* Isolated Middle Content Shadow */}
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
 
         {/* Header Navigation */}
-        <header className="absolute left-0 right-0 top-0 z-20 mx-auto flex w-full max-w-[1920px] items-center justify-between px-10 pt-8 md:px-40">
+        <header className="absolute left-0 right-0 top-0 z-30 mx-auto flex w-full max-w-[1920px] items-center justify-between px-10 pt-8 md:px-40">
           {/* Netflix Logo */}
           <Image
             src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAUkLCBtHBbguPPqzaFOzEv4Pw_eS79j0y7ADR4hkB30-HkahpsUb5yvfzgKsfU2oNda-7hpkfYLnXhjc23JVT07PHsGgfsaHAB7qOhy2_5gn-nuKOVSUSBzn-i-O3ea2QQaXx3PYkHes.svg"
@@ -51,7 +51,7 @@ export default function Home() {
           {/* Sign In Button */}
           <button
             style={{ transform: 'translate(3mm, -2mm)' }}
-            className="rounded bg-[#E50914] px-4 py-1.5 text-sm font-regular text-white transition-colors hover:bg-[#C11119]"
+            className="rounded bg-[#e50914] px-4 py-1.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#c11119] cursor-pointer"
           >
             Sign In
           </button>
