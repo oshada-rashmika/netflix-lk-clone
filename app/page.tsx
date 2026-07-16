@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black font-sans antialiased selection:bg-[#E50914] selection:text-white overflow-x-hidden">
 
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-[110vh] md:h-[115vh] min-h-[700px] w-full overflow-hidden">
 
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -28,7 +28,7 @@ export default function Home() {
           className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.58)_20%,rgba(0,0,0,0.76)_65%,rgba(0,0,0,0.92)_100%)]"
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0)_15%,rgba(0,0,0,0)_70%,rgba(0,0,0,0.95)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_8%,rgba(0,0,0,0)_60%,rgba(0,0,0,1)_100%)]"
         />
 
         {/* Isolated Middle Content Shadow */}
@@ -51,28 +51,28 @@ export default function Home() {
           {/* Sign In Button */}
           <button
             style={{ transform: 'translate(3mm, -2mm)' }}
-            className="rounded bg-[#e50914] px-4 py-1.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#c11119] cursor-pointer"
+            className="flex items-center justify-center rounded bg-[#e50914] px-[17px] h-[33px] text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#c11119] cursor-pointer"
           >
             Sign In
           </button>
         </header>
 
         {/* Main Center Content Container */}
-        <div className="relative z-20 flex h-full w-full flex-col items-center justify-center px-4 text-center">
-          <div className="flex flex-col items-center w-full max-w-[950px] transform xl:-translate-y-[34px]">
+        <div className="relative z-20 flex h-[100vh] min-h-[600px] w-full flex-col items-center justify-center px-4 text-center">
+          <div className="flex flex-col items-center w-full max-w-[950px] transform xl:-translate-y-[-20px]">
 
             {/* H1 Primary Title */}
-            <h1 className="text-[32px] md:text-[44px] xl:text-[53px] font-semibold tracking-normal text-white leading-[1.3] max-w-[720px]">
+            <h1 className="text-[36px] md:text-[48px] xl:text-[57px] font-bold tracking-normal text-white leading-[1.3] max-w-[720px]">
               Unlimited movies, TV<br />shows, and more
             </h1>
 
             {/* Sub-heading */}
-            <p className="mt-[16px] text-lg md:text-[19px] font-normal tracking-wide text-white">
+            <p className="mt-[16px] text-lg md:text-[19px] font-semibold tracking-wide text-white">
               Starts at USD 2.99. Cancel anytime.
             </p>
 
             {/* Call to Action Text */}
-            <p className="mt-[24px] text-base md:text-[15px] font-normal tracking-normal text-white transform xl:translate-y-[4px]">
+            <p className="mt-[24px] text-[17px] md:text-[16px] font-normal tracking-normal text-white transform xl:translate-y-[4px]">
               Ready to watch? Enter your email to create or restart your membership.
             </p>
 

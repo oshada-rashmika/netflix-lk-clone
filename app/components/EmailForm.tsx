@@ -17,7 +17,7 @@ export default function EmailForm({ idPrefix, className = "" }: EmailFormProps) 
       onSubmit={handleSubmit}
       className={`flex flex-col md:flex-row gap-2 justify-center items-center w-full px-4 md:px-0 ${className}`}
     >
-      <div className="relative w-full md:flex-1 xl:w-[570px] max-w-[570px]">
+      <div className="relative w-full md:flex-1 xl:w-[400px] max-w-[400px]">
         <input
           type="email"
           id={`${idPrefix}-email`}
@@ -25,11 +25,11 @@ export default function EmailForm({ idPrefix, className = "" }: EmailFormProps) 
           placeholder=" "
           autoComplete="email"
           required
-          className="peer w-full h-[56px] rounded-[4px] border border-white/30 bg-[#161616]/70 px-4 pt-[22px] pb-[6px] text-white placeholder-transparent transition-all focus:border-white focus:outline-none focus:ring-1 focus:ring-white text-base font-normal"
+          className="peer w-full h-[60px] rounded-[4px] border border-white/30 bg-[#161616]/70 px-4 pt-[22px] pb-[6px] text-white placeholder-transparent transition-all focus:border-white focus:outline-none focus:ring-1 focus:ring-white text-base font-normal"
         />
         <label
           htmlFor={`${idPrefix}-email`}
-          className="absolute left-4 top-[18px] text-zinc-400 font-normal text-base transition-all duration-150 transform origin-[0_0] pointer-events-none
+          className="absolute left-4 top-[20px] text-zinc-400 font-normal text-base transition-all duration-150 transform origin-[0_0] pointer-events-none
             peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100
             peer-focus:-translate-y-[8px] peer-focus:scale-[0.75] peer-focus:text-zinc-400
             peer-[:not(:placeholder-shown)]:-translate-y-[8px] peer-[:not(:placeholder-shown)]:scale-[0.75]"
@@ -40,7 +40,7 @@ export default function EmailForm({ idPrefix, className = "" }: EmailFormProps) 
 
       <button
         type="submit"
-        className="inline-flex h-[56px] w-full md:w-[210px] items-center justify-center gap-2.5 rounded-[4px] bg-[#E50914] px-6 text-2xl font-medium text-white transition-colors duration-150 hover:bg-[#C11119] whitespace-nowrap active:scale-[0.99] shrink-0"
+        className="inline-flex h-[60px] w-full md:w-[210px] items-center justify-center gap-2.5 rounded-[4px] bg-[#E50914] px-6 text-2xl font-medium text-white transition-colors duration-150 hover:bg-[#C11119] whitespace-nowrap active:scale-[0.99] shrink-0"
       >
         <span>Get Started</span>
         <svg
