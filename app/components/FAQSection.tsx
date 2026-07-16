@@ -48,7 +48,7 @@ function AccordionItem({ question, answer }: FAQ) {
       >
         <span className="text-lg md:text-[22px] text-white font-light">{question}</span>
         <svg
-          className={`w-10 h-10 text-white transition-transform duration-300 ease-out flex-shrink-0 ${isOpen ? "rotate-45" : "rotate-0"
+          className={`w-10 h-10 text-white transition-transform duration-300 ease-out flex-shrink-0 ${isOpen ? "-rotate-45" : "rotate-0"
             }`}
           fill="none"
           viewBox="0 0 24 24"
