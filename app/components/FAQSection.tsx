@@ -132,7 +132,7 @@ export default function FAQSection() {
           <p className="text-white font-normal text-[15px] mb-4">
             Ready to watch? Enter your email to create or restart your membership.
           </p>
-          <EmailForm idPrefix="faq" className="max-w-[800px] w-full" />
+          <EmailForm idPrefix="faq" className="max-w-[800px] w-full items-start md:items-center" />
         </div>
       </div>
     </section>

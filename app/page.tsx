@@ -76,7 +76,7 @@ export default function Home() {
               Ready to watch? Enter your email to create or restart your membership.
             </p>
 
-            <EmailForm idPrefix="hero" className="mt-6" />
+            <EmailForm idPrefix="hero" className="mt-6 items-center" />
           </div>
         </div>
 
