@@ -44,6 +44,7 @@ export default function Home() {
             alt="Netflix Logo"
             width={148}
             height={40}
+            className="w-[90px] md:w-[148px] h-auto"
             style={{ transform: 'translate(-4mm, -2mm)' }}
             priority
           />
@@ -51,7 +52,7 @@ export default function Home() {
           {/* Sign In Button */}
           <button
             style={{ transform: 'translate(3mm, -2mm)' }}
-            className="flex items-center justify-center rounded bg-[#e50914] px-[17px] h-[33px] text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#c11119] cursor-pointer"
+            className="flex items-center justify-center rounded bg-[#e50914] px-3 h-[28px] text-[13px] md:px-[17px] md:h-[33px] md:text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#c11119] cursor-pointer"
           >
             Sign In
           </button>
