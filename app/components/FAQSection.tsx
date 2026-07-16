@@ -109,7 +109,7 @@ export default function FAQSection() {
       aria-labelledby="faq-heading"
       className="bg-black w-full py-8 md:py-12"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
+      <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 xl:px-16">
         <h2
           id="faq-heading"
           className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform xl:translate-x-[85px] xl:translate-y-[-70px]"

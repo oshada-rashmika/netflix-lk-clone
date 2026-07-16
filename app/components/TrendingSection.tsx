@@ -44,16 +44,14 @@ interface TrendingCardProps {
 
 function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
   return (
-    <article className="relative flex-shrink-0">
-      <span aria-hidden="true" className="rank-number absolute bottom-6 left-0 z-10">
+    <article className="relative flex-shrink-0 mr-4 md:mr-0">
+      <span aria-hidden="true" className="rank-number absolute bottom-[20px] md:bottom-[28px] left-0 z-10 text-[64px] md:text-[98px]">
         {rank}
       </span>
 
-      {/* id added only on card 1 — used by ReasonsToJoin to measure the exact
-          rendered left edge, so alignment works regardless of any transform. */}
       <div
         id={rank === 1 ? "trending-first-poster" : undefined}
-        className="relative ml-6 h-[210px] w-[150px] md:h-[280px] md:w-[200px] overflow-hidden rounded-xl xl:scale-[0.9] origin-left"
+        className="relative ml-[22px] md:ml-[32px] h-[180px] w-[125px] sm:h-[210px] sm:w-[150px] md:h-[280px] md:w-[200px] overflow-hidden rounded-xl xl:scale-[0.9] origin-left"
       >
         <Image src={posterUrl} alt={title} fill sizes="(min-width: 768px) 200px, 150px" className="object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
       </div>
@@ -61,16 +59,15 @@ function TrendingCard({ rank, title, posterUrl }: TrendingCardProps) {
   );
 }
 
-// ScrollIndicator
 function ScrollIndicator() {
   return (
     <div
       id="trending-scroll-indicator"
       aria-label="Scroll for more"
       role="button"
-      className="flex-shrink-0 self-center flex items-center justify-center w-6 h-30 -translate-x-27 bg-zinc-800/70 backdrop-blur-sm cursor-pointer rounded-lg transition-colors duration-150 hover:bg-zinc-700/90"
+      className="flex flex-shrink-0 self-center items-center justify-center w-8 h-24 bg-zinc-800/70 backdrop-blur-sm cursor-pointer rounded-lg transition-colors duration-150 hover:bg-zinc-700/90 ml-4 mr-2"
     >
-      <ChevronRight className="w-10 h-10 text-gray-400" strokeWidth={2} />
+      <ChevronRight className="w-6 h-6 text-gray-400" strokeWidth={2} />
     </div>
   );
 }
@@ -80,14 +77,19 @@ export default function TrendingSection() {
   return (
     <section
       aria-label="Trending Now"
-      className="bg-black w-full py-6 md:py-8"
+      className="bg-black w-full pt-4 pb-6 md:py-8"
     >
-      <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
+      <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 xl:px-16 mb-4 xl:translate-x-[85px] xl:-translate-y-4">
+        <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
+          Trending Now
+        </h2>
+      </div>
+      <div className="mx-auto w-full max-w-[1440px] md:px-10 xl:px-16">
         <div className="relative flex overflow-hidden rounded-r-md scale-99 xl:-translate-y-7 xl:translate-x-6 origin-top">
 
           {/* Scrollable cards row */}
           <div
-            className="flex flex-1 gap-0 overflow-x-auto scrollbar-hide pl-[60px]"
+            className="flex gap-0 overflow-x-auto scrollbar-hide px-6 md:px-0 md:pl-[40px] pb-4"
           >
             {TRENDING_ITEMS.map((item) => (
               <TrendingCard

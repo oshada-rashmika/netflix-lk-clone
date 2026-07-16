@@ -320,7 +320,7 @@ export default function ReasonsToJoin() {
 
   return (
     <section aria-labelledby="reasons-heading" className="bg-black w-full py-8 md:py-10 transform xl:translate-y-[-45px]">
-      <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
+      <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 xl:px-16">
 
         <h2
           id="reasons-heading"

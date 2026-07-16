@@ -122,14 +122,7 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* "Trending Now" label */}
-        <div className="absolute inset-x-0 bottom-0 h-[115px] z-20 flex items-end pb-6 transform xl:translate-y-[14px]">
-          <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 xl:px-16 transform xl:translate-x-[85px]">
-            <h2 className="text-white text-xl md:text-2xl font-medium tracking-normal">
-              Trending Now
-            </h2>
-          </div>
-        </div>
+
 
       </section>
 
