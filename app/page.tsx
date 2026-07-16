@@ -2,6 +2,7 @@ import Image from "next/image";
 import TrendingSection from "./components/TrendingSection";
 import ReasonsToJoin from "./components/ReasonsToJoin";
 import FAQSection from "./components/FAQSection";
+import EmailForm from "./components/EmailForm";
 
 export default function Home() {
   return (
@@ -73,47 +74,7 @@ export default function Home() {
               Ready to watch? Enter your email to create or restart your membership.
             </p>
 
-            <form className="mt-[7mm] flex w-full flex-row gap-1.5 justify-center items-center scale-[1.3]">
-
-              {/* Email Input Field */}
-              <div className="relative w-[7.6cm] group transform translate-y-[1px]">
-                <input
-                  type="email"
-                  id="hero-email"
-                  name="email"
-                  placeholder=" "
-                  autoComplete="email"
-                  required
-                  className="peer w-full h-11 rounded-[4px] border border-white/30 bg-[#161616]/70 px-3 pt-4 pb-1 text-white placeholder-transparent transition-all focus:border-white focus:outline-none focus:ring-1 focus:ring-white text-sm font-normal"
-                />
-                <label
-                  htmlFor="hero-email"
-                  className="absolute left-3 top-[13px] text-zinc-400 font-normal text-xs transition-all duration-150 transform origin-[0_0] pointer-events-none
-                    peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100
-                    peer-focus:-translate-y-[6px] peer-focus:scale-[0.75] peer-focus:text-zinc-400
-                    peer-[:not(:placeholder-shown)]:-translate-y-[6px] peer-[:not(:placeholder-shown)]:scale-[0.75]"
-                >
-                  Email address
-                </label>
-              </div>
-
-              {/* CTA Button */}
-              <button
-                type="submit"
-                className="inline-flex h-11 w-[4.2cm] items-center justify-center gap-1.5 rounded-[4px] bg-[#E50914] px-2 text-lg font-medium text-white transition-colors duration-150 hover:bg-[#C11119] whitespace-nowrap active:scale-[0.99] transform translate-y-[1px]"
-              >
-                <span>Get Started</span>
-                <svg
-                  className="w-3 h-3 text-white stroke-[3] transform translate-y-[0.5px]"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M4.5 1L11.5 8L4.5 15" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-
-            </form>
+            <EmailForm idPrefix="hero" className="mt-6" />
           </div>
         </div>
 

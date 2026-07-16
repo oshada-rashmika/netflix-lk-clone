@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import EmailForm from "./EmailForm";
 
 interface FAQ {
   question: string;
@@ -58,13 +59,11 @@ function AccordionItem({ question, answer }: FAQ) {
         </svg>
       </button>
 
-      {/* Smooth height transition wrapper */}
       <div
         className={`grid transition-all duration-300 ease-out bg-[#2d2d2d] ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
       >
         <div className="overflow-hidden">
-          {/* Adjusted internal padding for consistency */}
           <div className="px-6 pb-5 text-white text-2xl leading-snug whitespace-pre-wrap border-t-2 border-black mt-[1px]">
             <div className="pt-5">{answer}</div>
           </div>
@@ -114,7 +113,6 @@ export default function FAQSection() {
           Frequently Asked Questions
         </h2>
 
-        {/* Accordion Container matching the exact positioning math of the cards grid */}
         <div
           ref={containerRef}
           style={edges ? { marginLeft: edges.left, width: edges.width } : undefined}
@@ -123,6 +121,14 @@ export default function FAQSection() {
           {FAQS.map((faq, idx) => (
             <AccordionItem key={idx} question={faq.question} answer={faq.answer} />
           ))}
+        </div>
+
+        {/* Secondary Email Capture Block */}
+        <div className="flex flex-col items-center justify-center mt-[-10px] mb-12 text-center">
+          <p className="text-white font-normal text-[15px] mb-4">
+            Ready to watch? Enter your email to create or restart your membership.
+          </p>
+          <EmailForm idPrefix="faq" className="max-w-[800px] w-full" />
         </div>
       </div>
     </section>
