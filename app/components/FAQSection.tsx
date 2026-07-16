@@ -12,6 +12,26 @@ const FAQS: FAQ[] = [
     question: "What is Netflix?",
     answer: "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.\n\nYou can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!",
   },
+  {
+    question: "How much does Netflix cost?",
+    answer: "New members can try 30 days of Netflix for USD 0. After the free trial ends, your plan will automatically renew at the regular price depending on the plan you select. Plans range from USD 2.99 to USD 9.99.\n\nWatch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device. No extra costs, cancel anytime.",
+  },
+  {
+    question: "Where can I watch?",
+    answer: "Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.\n\nYou can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.",
+  },
+  {
+    question: "How do I cancel?",
+    answer: "Netflix is flexible. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.",
+  },
+  {
+    question: "What can I watch on Netflix?",
+    answer: "Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.",
+  },
+  {
+    question: "Is Netflix good for kids?",
+    answer: "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.\n\nKids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.",
+  },
 ];
 
 function AccordionItem({ question, answer }: FAQ) {
@@ -22,7 +42,7 @@ function AccordionItem({ question, answer }: FAQ) {
       <button
         onClick={() => setIsOpen(!isOpen)}
 
-        className="flex w-full items-center justify-between bg-[#2d2d2d] hover:bg-[#414141] transition-colors duration-200 py-[20px] px-6 text-left"
+        className="flex w-full items-center justify-between bg-[#2d2d2d] hover:bg-[#414141] transition-colors duration-200 py-[22px] px-6 text-left"
         aria-expanded={isOpen}
       >
         <span className="text-[22px] text-white font-light">{question}</span>
@@ -89,7 +109,7 @@ export default function FAQSection() {
       <div className="mx-auto w-full max-w-[1440px] px-10 md:px-16">
         <h2
           id="faq-heading"
-          className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform translate-x-[85px] translate-y-[-75px]"
+          className="mb-5 text-xl md:text-2xl font-medium text-white tracking-normal transform translate-x-[85px] translate-y-[-70px]"
         >
           Frequently Asked Questions
         </h2>
